@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button onclick="document.body.style.backgroundColor='red'">red</button>
+    <button onclick="makeYellow()">yellow</button>
+    <button id="green-btn">green</button>
+    <button id="blue-btn">Blue</button>
+    <button id="pink-btn">Hot Pink</button>
+    <button id="khaki-btn">Khaki</button>
+    <button id="purple-btn">Purple</button>
+
+    <!-- Add Comment section -->
+    <section>
+        <h1>Add Your Comment</h1>
+        <div id="comment-container">
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, architecto amet veritatis facere illo quibusdam blanditiis voluptate voluptatem, assumenda porro optio, rerum accusamus recusandae itaque quae laudantium corrupti! Ad, facere?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quae!</p>
+           
+        </div>
+        <div>
+            <textarea name="" id="comment-box" cols="40" rows="5"></textarea>
+            <br>
+        <button id="post-btn">Post</button>
+        </div>
+    </section>
+    
+    <script src="js/events.js"></script>
+    <script>
+        document.getElementById('post-btn').addEventListener('click', function(){
+    
+    const commentBox = document.getElementById('comment-box');
+    
+   
+    const newComment = document.createElement('p');
+    newComment.innerText = commentBox.value;
+ 
+    const commentContainer = document.getElementById('comment-container');
+    commentContainer.appendChild(newComment);
+     commentBox.value = ''; 
+ })
+    </script>
+</body>
+</html>
