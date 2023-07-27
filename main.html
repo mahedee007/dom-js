@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="makeRed()">RED</button>
+    <button id="green-btn">GREEN</button>
+    <button onclick="document.body.style.backgroundColor = 'yellow'">YELLOW</button>
+    <button id="blue-btn">BLUE</button>
+
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor = "red";
+        }
+        const greenBtn = document.getElementById('green-btn');
+        greenBtn.onclick = makeGreen;
+        function makeGreen(){
+            document.body.style.backgroundColor = "green";
+        }
+        const blueBtn = document.getElementById('blue-btn');
+        blueBtn.onclick = function makeBlue(){
+            document.body.style.backgroundColor = "blue";
+        }
+
+
+    </script>
 </body>
 </html>
